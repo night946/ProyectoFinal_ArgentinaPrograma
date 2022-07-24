@@ -22,14 +22,16 @@ public class Usuario {
     @NotNull
     private String nombre;
     @NotNull
-    @Column (unique = true)
+    @Column(unique = true)
     private String nombreUsuario;
     @NotNull
     private String email;
     @NotNull
     private String password;
+    @NotNull
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "usuario_rol", joinColumns = @JoinColumn(name ="usuario_id"), inverseJoinColumns = @JoinColumn(name = "rol_id"))
+    @JoinTable(name = "usuario_rol", joinColumns = @JoinColumn(name = "usuario_id"),
+    inverseJoinColumns = @JoinColumn(name = "rol_id"))
     private Set<Rol> roles = new HashSet<>();
     
     //Constructor
@@ -37,15 +39,15 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String nombre, String nombreUsuario, String Email) {
+    public Usuario(String nombre, String nombreUsuario, String email, String password) {
         this.nombre = nombre;
         this.nombreUsuario = nombreUsuario;
         this.email = email;
+        this.password = password;
     }
 
-    public Usuario(String nombre, String nombreUsuario, String email, String encode) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+
+    
     
     //Getter and setter
 
@@ -77,8 +79,8 @@ public class Usuario {
         return email;
     }
 
-    public void setEmail(String Email) {
-        this.email = Email;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -96,5 +98,5 @@ public class Usuario {
     public void setRoles(Set<Rol> roles) {
         this.roles = roles;
     }
-    
+  
 }
