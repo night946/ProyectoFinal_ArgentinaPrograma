@@ -8,11 +8,11 @@
         <version>2.6.7</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.portafolioap</groupId>
-    <artifactId>ap</artifactId>
+    <groupId>com.portfolio</groupId>
+    <artifactId>AP</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ap</name>
-    <description>Portafolio Nico Ap</description>
+    <name>AP</name>
+    <description>Portfolio de APNico</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -51,6 +51,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
@@ -60,6 +61,11 @@
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.9</version>
         </dependency>
 
     </dependencies>
@@ -82,3 +88,4 @@
     </build>
 
 </project>
+
